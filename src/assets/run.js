@@ -44,8 +44,9 @@ function hex (c) {
       var alpha = 0.0;
   
       var saida = [];
-      
-      for (i = 0; i < len; i++) {
+      var c = [];
+      saida.push(convertToHex(end));
+      for (i = 0; i < len-2; i++) {
           var c = [];
           alpha += (1.0/len);
           
@@ -56,7 +57,7 @@ function hex (c) {
           saida.push(convertToHex (c));
           
       }
-      
+      saida.push(convertToHex(start));
       return saida;
       
   }
