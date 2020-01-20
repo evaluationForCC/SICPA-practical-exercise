@@ -1,0 +1,16 @@
+<br>
+<input [(ngModel)]="topLeftColor" placeholder="topLeftColor" /><br>
+<input [(ngModel)]="bottomRightColor" placeholder="bottomRightColor" /><br>
+
+<div class= "btn" (click)="draw(color)">draw</div>
+
+<div *ngIf="gridColor">
+    <div class="grid" *ngFor="let colorRaw of gridColor">
+      
+        <div class="colorRaw" *ngFor="let colorItem of colorRaw">
+      
+        <div class="item" [style.background]="'#' + colorItem" > #{{ colorItem }}</div>
+        </div>
+     
+    </div>
+</div>
